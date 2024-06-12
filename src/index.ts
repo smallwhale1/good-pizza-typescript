@@ -1,11 +1,17 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+import Box from './classes/Box';
+import Game from './classes/Game';
+import Sprite from './classes/Sprite';
+import {
+  GAME_WIDTH,
+  GAME_HEIGHT,
+  SAUCE_BOX_WIDTH,
+  SAUCE_BOX_HEIGHT,
+} from './constants';
 
-import confetti from 'canvas-confetti';
+const container = document.querySelector<HTMLDivElement>('#game-container');
+if (container) {
+  container.style.width = `${GAME_WIDTH}px`;
+  container.style.height = `${GAME_HEIGHT}px`;
 
-confetti.create(document.getElementById('canvas') as HTMLCanvasElement, {
-  resize: true,
-  useWorker: true,
-})({ particleCount: 200, spread: 200 });
+  new Game(container);
+}

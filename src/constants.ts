@@ -1,0 +1,27 @@
+// General dimensions
+
+export const TILE_SIZE = 64;
+export const GAME_WIDTH = TILE_SIZE * 16; // 1024
+export const GAME_HEIGHT = TILE_SIZE * 9; // 576
+
+// Sauce box dimensions
+
+export const SAUCE_BOX_ASPECT_RATIO = 172 / 244;
+export const SAUCE_BOX_WIDTH = TILE_SIZE * 2;
+export const SAUCE_BOX_HEIGHT = SAUCE_BOX_WIDTH * SAUCE_BOX_ASPECT_RATIO;
+
+export const INGREDIENT_BOX_ASPECT_RATIO = 172 / 181;
+export const INGREDIENT_BOX_WIDTH = SAUCE_BOX_WIDTH * (181 / 244);
+export const INGREDIENT_BOX_HEIGHT =
+  INGREDIENT_BOX_WIDTH * SAUCE_BOX_ASPECT_RATIO;
+
+export const DOUGH_BOX_ASPECT_RATIO = 200 / 245;
+export const DOUGH_BOX_WIDTH = SAUCE_BOX_WIDTH;
+export const DOUGH_BOX_HEIGHT = DOUGH_BOX_WIDTH * DOUGH_BOX_ASPECT_RATIO;
+
+export const PIZZA_SIZE = TILE_SIZE * 3;
+export const SAUCE_OFFSET = 10;
+
+export const TABLE_WIDTH = TILE_SIZE * 3;
+export const TABLE_ASPECT_RATIO = 662 / 515;
+export const TABLE_HEIGHT = TABLE_WIDTH * TABLE_ASPECT_RATIO;
